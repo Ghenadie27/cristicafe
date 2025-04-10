@@ -18,4 +18,4 @@ jobs:
         aws-region: us-east-1  # Change this to your region of your bucket
     
     - name: Sync to S3
-      run: aws s3 sync . s3://gesecom.net # Change this to your bucket name
+      run: aws s3 sync . s3://gesecom.net/ --delete --exclude ".git/*" --exclude ".github/*" # Change this to your bucket name
