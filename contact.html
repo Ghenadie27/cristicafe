@@ -24,6 +24,19 @@
         <link href="css/vegas.min.css" rel="stylesheet">
 
         <link href="css/tooplate-barista.css" rel="stylesheet">
+        <script>
+            function delayedSubmit(event) {
+              event.preventDefault(); // Stop the form from submitting immediately
+        
+              // Optional: Show a message
+              document.getElementById("status").innerText = "Submitting in 2 seconds...";
+        
+              // Delay submission by 3 seconds (3000 milliseconds)
+              setTimeout(function() {
+                event.target.submit(); // Submit the form
+              }, 2000);
+            }
+        </script>
 
     </head>
     
@@ -91,12 +104,14 @@
                                                 <div class="booking-form-body">
                                                     <div class="row">
                                                         <form id="bookingForm">
+                                                            <form onsubmit="delayedSubmit(event)">
                                                             <form action="index.html" method="get">
                                                             <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
                                                             <input type="email" class="form-control" id="email" name="email" pattern="[^ @]*@[^ @]*" placeholder="Jack@gmail.com" required>
                                                             <textarea id="message" class="form-control" name="message" rows="4" placeholder="Message" required></textarea>
                                                             <button type="submit" class="form-control" id="submitBtn">Submit</button>
                                                             </form>
+                                                        </form>
                                                         </form>                                                        
                                                     </div>
                                                 </div>
