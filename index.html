@@ -35,7 +35,7 @@
                     <div class="container">
                         <a class="navbar-brand d-flex align-items-center" href="index.html">
                             <img src="images/coffee-beans.png" class="navbar-brand-image img-fluid" alt="Cristi Cafe Template">
-                            Cristi
+                            Cristi Cafe
                         </a>
         
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -604,47 +604,11 @@
             </main>
 
         <!-- JAVASCRIPT FILES -->
-       
-
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/jquery.sticky.js"></script>
         <script src="js/click-scroll.js"></script>
         <script src="js/vegas.min.js"></script>
         <script src="js/custom.js"></script>
-
-         <!-- <script src="js/contact.js"></script> -->
-         <script>
-            document.getElementById('submitBtn').addEventListener('click', async () => {
-                 const formData = {
-                     name: document.getElementById("name").value,
-                     email: document.getElementById("email").value,
-                     message: document.getElementById("message").value,
-                     
-                 };
-     
-                 try {
-                     const response = await fetch('https://npft1r7xse.execute-api.us-east-1.amazonaws.com/dev/contact', {
-                         method: 'POST',
-                         headers: {
-                             'Content-Type': 'application/json',
-                         },
-                         body: JSON.stringify(formData),
-                     });
-     
-                     if (response.ok) {
-                         const result = await response.json();
-                         alert('Booking successful! ') //+ JSON.stringify(result));
-                     } else {
-                         const error = await response.text();
-                         alert('Error: ' + error);
-                     }
-                 } catch (err) {
-                     console.error('Error:', err);
-                     alert('Failed to send booking. Please try again.');
-                 }
-             });
-         </script>
-
     </body>
 </html>
