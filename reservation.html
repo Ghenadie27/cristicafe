@@ -165,7 +165,7 @@
                                     <strong class="me-2">Email:</strong>
 
                                     <a href="mailto:info@yourgmail.com" class="site-footer-link">
-                                        hello@barista.co
+                                        hello@cristi.com
                                     </a>
                                 </p>
                             </div>
@@ -213,6 +213,7 @@
             document.getElementById('submitBtn').addEventListener('click', async () => {
                 const submitBtn = document.getElementById('submitBtn');
                 submitBtn.disabled = true; // Disable the button immediately
+                submitBtn.innerHTML = 'Sending...'; // Change button text to indicate sending
         
                 const formData = {
                     name: document.getElementById("name").value,
@@ -237,6 +238,7 @@
                         alert('Booking successful!');
                         // Optionally, you can redirect or clear the form here
                         window.location.href = 'index.html'; // Redirect to a thank you page
+                        
                     } else {
                         const error = await response.text();
                         alert('Error: ' + error);
@@ -249,41 +251,6 @@
                 }
             });
         </script>
-        <!-- <script>
-            document.getElementById('submitBtn').addEventListener('click', async () => {
-                const formData = {
-                    name: document.getElementById("name").value,
-                    phone: document.getElementById("phone").value,
-                    time: document.getElementById("time").value,
-                    date: document.getElementById("date").value,
-                    number: document.getElementById("number").value,
-                    message: document.getElementById("message").value,
-                    
-                };
-    
-                try {
-                    const response = await fetch('https://rtqahdyybb.execute-api.us-east-1.amazonaws.com/default/form', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify(formData),
-                    });
-    
-                    if (response.ok) {
-                        const result = await response.json();
-                        alert('Booking successful! ') //+ JSON.stringify(result));
-                    } else {
-                        const error = await response.text();
-                        alert('Error: ' + error);
-                    }
-                } catch (err) {
-                    console.error('Error:', err);
-                    alert('Failed to send booking. Please try again.');
-                }
-            });
-                        
-        </script> -->
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/jquery.sticky.js"></script>
