@@ -626,25 +626,24 @@
                             <div class="booking-form-wrap">
                                 <div class="row">
                                     <div class="col-lg-7 col-12 p-0">
-                                        <form class="custom-form booking-form" id="bookingForm" role="form">
-                                            <div class="text-center mb-4 pb-lg-2">
-                                                <em class="text-white"></em>
-                                                <h2 class="text-white">Contactează-ne</h2>
-                                            </div>
-                                                <div class="booking-form-body">
-                                                    <div class="row">
-                                                        <form id="bookingForm">
-                                                            
-                                                            <input type="text" class="form-control" id="name" name="name" placeholder="Nume" required>
-                                                            <input type="email" class="form-control" id="email" name="email" pattern="[^ @]*@[^ @]*" placeholder="Jack@gmail.com" required>
-                                                            <textarea id="message" class="form-control" name="message" rows="4" placeholder="Mesaj" required></textarea>
-                                                            <button type="button" class="form-control" id="submitBtn">Submit</button>
-                                                            
-                                                        </form>                                                        
-                                                    </div>
+                                        <div class="contact-form">
+                                            <h3>Trimite-ne un Mesaj</h3>
+                                            <form id="bookingForm">
+                                                <div class="form-group">
+                                                    <label for="name">Nume</label>
+                                                    <input type="text" id="name" name="name" required>
                                                 </div>
-                                        </form>
-                                        
+                                                <div class="form-group">
+                                                    <label for="email">Email</label>
+                                                    <input type="email" id="email" name="email" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="message">Mesaj</label>
+                                                    <textarea id="message" name="message" rows="4" required></textarea>
+                                                </div>
+                                                <button type="button" class="submit-btn" id="submitBtn">Trimite Mesajul</button>
+                                            </form>
+                                        </div>
                                     </div>
 
                                     <div class="col-lg-5 col-12 p-0">
@@ -661,92 +660,17 @@
                 </section>
 
 
-                <footer class="site-footer">
-                    <div class="container">
-                        <div class="row">
+                <footer>
+        <p>&copy; 2023 Cristi Cafe. Toate drepturile rezervate.</p>
+    </footer>
 
-                            <div class="col-lg-4 col-12 me-auto">
-                                <em class="text-white d-block mb-4">Where to find us?</em>
-
-                                <strong class="text-white">
-                                    <i class="bi-geo-alt me-2"></i>
-                                    Piata Mare 3, Sibiu, 550145, Romania
-                                </strong>
-
-                                <ul class="social-icon mt-4">
-                                    <li class="social-icon-item">
-                                        <a href="#" class="social-icon-link bi-facebook">
-                                        </a>
-                                    </li>
-        
-                                    <li class="social-icon-item">
-                                        <a href="https://x.com" target="_new" class="social-icon-link bi-twitter">
-                                        </a>
-                                    </li>
-
-                                    <li class="social-icon-item">
-                                        <a href="#" class="social-icon-link bi-whatsapp">
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="col-lg-3 col-12 mt-4 mb-3 mt-lg-0 mb-lg-0">
-                                <em class="text-white d-block mb-4">Contact</em>
-
-                                <p class="d-flex mb-1">
-                                    <strong class="me-2">Phone:</strong>
-                                    <a href="tel:  0123-45-67-891" class="site-footer-link">
-                                        (65) 
-                                        0123-45-67-89
-                                    </a>
-                                </p>
-
-                                <p class="d-flex">
-                                    <strong class="me-2">Email:</strong>
-
-                                    <a href="mailto:info@yourgmail.com" class="site-footer-link">
-                                        hello@cristi.com
-                                    </a>
-                                </p>
-                            </div>
-
-
-                            <div class="col-lg-5 col-12">
-                                <em class="text-white d-block mb-4">Opening Hours.</em>
-
-                                <ul class="opening-hours-list">
-                                    <li class="d-flex">
-                                        Monday - Friday
-                                        <span class="underline"></span>
-
-                                        <strong>9:00 - 18:00</strong>
-                                    </li>
-
-                                    <li class="d-flex">
-                                        Saturday
-                                        <span class="underline"></span>
-
-                                        <strong>11:00 - 16:30</strong>
-                                    </li>
-
-                                    <li class="d-flex">
-                                        Sunday
-                                        <span class="underline"></span>
-
-                                        <strong>Closed</strong>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="col-lg-8 col-12 mt-4">
-                                <p class="copyright-text mb-0">Copyright © Cristi Cafe 2025
-                                    - Design: <a rel="sponsored" href="https://gesecom.net" target="_blank">Cristi</a></p>
-                            </div>
-
-                    </div>
-                </footer>
-            </main>
+        <!-- Buton de scroll sus -->
+        <a href="#" class="scroll-top" id="scrollTop">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+        </a>
+    </main>
 
 
         <!-- JAVASCRIPT FILES -->
