@@ -544,6 +544,62 @@
         </svg>
     </a>
 
-   
+    <!-- Adăugăm codul JavaScript pentru funcționalitatea taburilor din meniu -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Taburi meniu
+            const menuTabs = document.querySelectorAll('.menu-tab');
+            
+            menuTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Elimină clasa active de pe toate taburile
+                    menuTabs.forEach(t => t.classList.remove('active'));
+                    
+                    // Adaugă clasa active pe tabul curent
+                    this.classList.add('active');
+                    
+                    // Ascunde toate conținuturile de meniu
+                    document.querySelectorAll('.menu-content').forEach(content => {
+                        content.classList.remove('active');
+                    });
+                    
+                    // Afișează conținutul corespunzător
+                    const tabId = this.getAttribute('data-tab');
+                    document.getElementById(tabId + '-menu').classList.add('active');
+                });
+            });
+
+            // Buton de scroll sus
+            const scrollTopButton = document.getElementById('scrollTop');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    scrollTopButton.classList.add('visible');
+                } else {
+                    scrollTopButton.classList.remove('visible');
+                }
+            });
+            
+            scrollTopButton.addEventListener('click', function(event) {
+                event.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+            
+            // Smooth scroll pentru link-uri de navigare
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
