@@ -161,6 +161,23 @@
 
         <!-- JAVASCRIPT FILES -->
         <script>
+
+ // Buton de scroll sus
+            const scrollTopButton = document.getElementById('scrollTop');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    scrollTopButton.classList.add('visible');
+                } else {
+                    scrollTopButton.classList.remove('visible');
+                }
+            });
+            
+            scrollTopButton.addEventListener('click', function(event) {
+                event.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
             document.getElementById('submitBtn').addEventListener('click', async () => {
                 const submitBtn = document.getElementById('submitBtn');
                 submitBtn.disabled = true; // Disable the button immediately

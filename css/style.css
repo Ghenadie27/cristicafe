@@ -609,3 +609,8 @@
     object-fit: cover;
     border-radius: 5px 5px 0 0;
 }
+@media (max-width: 768px) {
+    .hero-image {
+        height: 300px;
+    }
+}
