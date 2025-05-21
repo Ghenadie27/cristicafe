@@ -582,4 +582,30 @@
         .scroll-top.visible {
             opacity: 1;
         }
-  
+  /* Stiluri pentru imagini în hero section */
+.hero-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Stiluri pentru imagini în about section */
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Stiluri pentru imagini în team section */
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+}
