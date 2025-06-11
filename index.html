@@ -10,10 +10,15 @@
 </head>
 <body>
     <!-- Header cu navigare -->
-    <header>
+   <header>
         <div class="navbar">
             <div class="logo">Cristi Cafe</div>
-            <div class="nav-links">
+            <button class="navbar-toggle" id="navbarToggle" aria-label="Deschide meniul">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links" id="navLinks">
                 <a href="#home">Acasă</a>
                 <a href="#about">Despre</a>
                 <a href="#menu">Meniu</a>
@@ -549,6 +554,19 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Taburi meniu
+                    // Responsive navbar toggle
+            const navbarToggle = document.getElementById('navbarToggle');
+            const navLinks = document.getElementById('navLinks');
+            navbarToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+
+            // Închide meniul când dai click pe un link (opțional)
+            document.querySelectorAll('#navLinks a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                });
+            });
             const menuTabs = document.querySelectorAll('.menu-tab');
             
             menuTabs.forEach(tab => {
