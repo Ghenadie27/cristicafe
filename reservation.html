@@ -161,5 +161,22 @@
                 }
             });
         </script>
+        <!-- Adaugă înainte de </body> -->
+            <script>
+                // Responsive navbar toggle
+                const navbarToggle = document.getElementById('navbarToggle');
+                const navLinks = document.getElementById('navLinks');
+                if (navbarToggle && navLinks) {
+                    navbarToggle.addEventListener('click', function() {
+                        navLinks.classList.toggle('active');
+                    });
+                    // Închide meniul când dai click pe un link
+                    navLinks.querySelectorAll('a').forEach(link => {
+                        link.addEventListener('click', () => {
+                            navLinks.classList.remove('active');
+                        });
+                    });
+                }
+            </script>
     </body>
 </html>
