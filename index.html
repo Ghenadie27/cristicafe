@@ -618,12 +618,15 @@
         navbarToggle.addEventListener('click', function(e) {
             e.stopPropagation();
             navLinks.classList.toggle('active');
+            // Adaugă/șterge clasa 'open' pe buton pentru efect vizual (opțional)
+            navbarToggle.classList.toggle('open');
         });
 
         // Închide meniul la click pe orice link
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
+                navbarToggle.classList.remove('open');
             });
         });
 
@@ -631,6 +634,7 @@
         document.addEventListener('click', function(e) {
             if (navLinks.classList.contains('active') && !navLinks.contains(e.target) && e.target !== navbarToggle) {
                 navLinks.classList.remove('active');
+                navbarToggle.classList.remove('open');
             }
         });
     }
