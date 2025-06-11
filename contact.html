@@ -244,13 +244,15 @@
         });
 
         // Închide meniul dacă dai click oriunde în afara meniului
-        document.addEventListener('click', function(e) {
-            if (navLinks.classList.contains('active') && !navLinks.contains(e.target) && e.target !== navbarToggle) {
-                navLinks.classList.remove('active');
-                navbarToggle.classList.remove('open');
-            }
-        });
+      document.addEventListener('click', function(e) {
+    if (navLinks.classList.contains('active') &&
+        !navLinks.contains(e.target) &&
+        !navbarToggle.contains(e.target)) {
+        navLinks.classList.remove('active');
+        navbarToggle.classList.remove('open');
     }
+});
+
 </script>
     </body>
 </html>
