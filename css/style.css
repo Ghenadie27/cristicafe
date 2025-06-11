@@ -99,32 +99,7 @@
             margin-left: 10px;
         }
     }
-                
-        /* .navbar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }        
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        
-        .nav-links {
-            display: flex;
-        }
-        
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-            padding: 5px;
-        }
-        
-        .nav-links a:hover {
-            text-decoration: underline;
-        } */
-        
+                  
         .reservation-btn {
             background-color: transparent;
             border: 1px solid white;
