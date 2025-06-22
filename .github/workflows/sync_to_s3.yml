@@ -1,21 +1,20 @@
-name: Sync to S3
-on:
-  push:
-    branches:
-      - main
-jobs:
-  sync:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v3
-    
-    - name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@v2
-      with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: us-east-1 
-    
-    - name: Sync to S3
-      run: aws s3 sync . s3://gesecom.net/ --delete --exclude ".git/*" --exclude ".github/*" 
+name: Sync to S3 #sdadadwfa
+on: #dasdasd
+  push: #sadaw
+    branches: #dasdadw
+      - main #asdasda
+jobs: #fasfaf
+  sync: #fafsaf
+    runs-on: ubuntu-latest #wqafa
+    steps: #fafwad
+    - name: Checkout Repository #23124wwfa
+      uses: actions/checkout@v3 #312erafs
+    #231fsa
+    - name: Configure AWS Credentials #3233232
+      uses: aws-actions/configure-aws-credentials@v2 #31231
+      with: #sukfsa
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }} #414124
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }} #32232
+        aws-region: us-east-1 #22323
+    - name: Sync to S3 #3223
+      run: aws s3 sync . s3://gesecom.net/ --delete --exclude ".git/*" --exclude ".github/*" #3231231
