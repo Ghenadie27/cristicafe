@@ -97,7 +97,7 @@
                     <p>&copy; 2025 Cristi Cafe. Toate drepturile rezervate.</p>
                 </footer>
 
-                <!-- Buton de scroll sus -->
+
                 <a href="#" class="scroll-top" id="scrollTop">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="18 15 12 9 6 15"></polyline>
@@ -106,10 +106,9 @@
             </main>
 
 
-        <!-- JAVASCRIPT FILES -->
+
         <script>
 
- // Buton de scroll sus
             const scrollTopButton = document.getElementById('scrollTop');
             
             window.addEventListener('scroll', function() {
@@ -127,9 +126,8 @@
 
             document.getElementById('submitBtn').addEventListener('click', async () => {
                 const submitBtn = document.getElementById('submitBtn');
-                submitBtn.disabled = true; // Disable the button immediately
-                submitBtn.innerHTML = 'Sending...'; // Change button text to indicate sending
-        
+                submitBtn.disabled = true; 
+                submitBtn.innerHTML = 'Sending...';
                 const formData = {
                     name: document.getElementById("name").value,
                     phone: document.getElementById("phone").value,
@@ -151,8 +149,8 @@
                     if (response.ok) {
                         const result = await response.json();
                         alert('Booking successful!');
-                        // Optionally, you can redirect or clear the form here
-                        window.location.href = 'index.html'; // Redirect to a thank you page
+
+                        window.location.href = 'index.html';
                         
                     } else {
                         const error = await response.text();
@@ -162,22 +160,22 @@
                     console.error('Error:', err);
                     alert('Failed to send booking. Please try again.');
                 } finally {
-                    submitBtn.disabled = false; // Re-enable the button after response or error
+                    submitBtn.disabled = false; 
                 }
             });
         </script>
-        <!-- Adaugă înainte de </body> -->
+
          <script>
-    // Responsive navbar toggle
+
     const navbarToggle = document.getElementById('navbarToggle');
     const navLinks = document.getElementById('navLinks');
 
     if (navbarToggle && navLinks) {
-        // Toggle menu
+
         navbarToggle.addEventListener('click', function(e) {
             e.stopPropagation();
             navLinks.classList.toggle('active');
-            // Adaugă/șterge clasa 'open' pe buton pentru efect vizual (opțional)
+
             navbarToggle.classList.toggle('open');
         });
 
@@ -189,7 +187,6 @@
             });
         });
 
-        // Închide meniul dacă dai click oriunde în afara meniului
     document.addEventListener('click', function(e) {
           if (
         navLinks.classList.contains('active') &&

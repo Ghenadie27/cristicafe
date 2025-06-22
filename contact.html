@@ -16,7 +16,6 @@
     <body class="reservation-page">
                 
             <main>
-                <!-- Header cu navigare -->
    
                 <header>
         <div class="navbar">
@@ -66,8 +65,6 @@
                                             </form>
                                         </div>
                                     </div>
-
-                                    <!-- Replace the map column markup to match the style of the contact form -->
 
                                     <div class="col-lg-5 col-12 p-0">
                                         <div class="contact-form" style="height:100%;display:flex;flex-direction:column;justify-content:center;">
@@ -155,7 +152,6 @@
                     <p>&copy; 2025 Cristi Cafe. Toate drepturile rezervate.</p>
                 </footer>
 
-        <!-- Buton de scroll sus -->
         <a href="#" class="scroll-top" id="scrollTop">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="18 15 12 9 6 15"></polyline>
@@ -163,11 +159,8 @@
         </a>
     </main>
 
-
-        <!-- JAVASCRIPT FILES -->
         <script>
 
- // Buton de scroll sus
             const scrollTopButton = document.getElementById('scrollTop');
             
             window.addEventListener('scroll', function() {
@@ -185,8 +178,8 @@
 
             document.getElementById('submitBtn').addEventListener('click', async () => {
                 const submitBtn = document.getElementById('submitBtn');
-                submitBtn.disabled = true; // Disable the button immediately
-                submitBtn.innerHTML = 'Sending...'; // Change button text to indicate sending	
+                submitBtn.disabled = true; 
+                submitBtn.innerHTML = 'Sending...'; 
 
                 const formData = {
                     name: document.getElementById("name").value,
@@ -205,8 +198,8 @@
     
                     if (response.ok) {
                         const result = await response.json();
-                        alert('Message sent!');//+ JSON.stringify(result)
-                        window.location.href = 'index.html'; // Redirect to a thank you page or home page
+                        alert('Message sent!');
+                        window.location.href = 'index.html'; 
                     } else {
                         const error = await response.text();
                         alert('Error: ' + error);
@@ -215,27 +208,26 @@
                     console.error('Error:', err);
                     alert('Failed to send the message. Please try again.');
                 } finally {
-                    submitBtn.disabled = false; // Re-enable the button after response or error
+                    submitBtn.disabled = false;
                 }
             });
                         
         </script>
-                <!-- Adaugă înainte de </body> -->
+
        <script>
-    // Responsive navbar toggle
+
     const navbarToggle = document.getElementById('navbarToggle');
     const navLinks = document.getElementById('navLinks');
 
     if (navbarToggle && navLinks) {
-        // Toggle menu
+
         navbarToggle.addEventListener('click', function(e) {
             e.stopPropagation();
             navLinks.classList.toggle('active');
-            // Adaugă/șterge clasa 'open' pe buton pentru efect vizual (opțional)
+
             navbarToggle.classList.toggle('open');
         });
 
-        // Închide meniul la click pe orice link
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
@@ -243,7 +235,6 @@
             });
         });
 
-        // Închide meniul dacă dai click oriunde în afara meniului
       document.addEventListener('click', function(e) {
         if (
         navLinks.classList.contains('active') &&

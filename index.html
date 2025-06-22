@@ -9,7 +9,7 @@
     
 </head>
 <body>
-    <!-- Header cu navigare -->
+
    <header>
         <div class="navbar">
             <div class="logo">Cristi Cafe</div>
@@ -29,7 +29,6 @@
         </div>
     </header>
 
-    <!-- Secțiunea Hero / Home -->
     <section id="home">
         <div class="hero-content">
           <div class="hero-image">
@@ -49,7 +48,6 @@
         </div>
     </section>
 
-    <!-- Secțiunea Despre Noi -->
     <section id="about">
         <div class="container">
             <div class="section-title">
@@ -498,7 +496,6 @@
         </div>
     </section>
 
-    <!-- Secțiunea Echipa -->
     <section id="team">
         <div class="container">
             <div class="section-title">
@@ -538,45 +535,38 @@
             </div>
         </div>
     </section>
-     <!-- Footer -->
+
     <footer>
         <p>&copy; 2025 Cristi Cafe. Toate drepturile rezervate.</p>
     </footer>
 
-    <!-- Buton de scroll sus -->
     <a href="#" class="scroll-top" id="scrollTop">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="18 15 12 9 6 15"></polyline>
         </svg>
     </a>
 
-    <!-- Adăugăm codul JavaScript pentru funcționalitatea taburilor din meniu -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Taburi meniu
                   
             const menuTabs = document.querySelectorAll('.menu-tab');
             
             menuTabs.forEach(tab => {
                 tab.addEventListener('click', function() {
-                    // Elimină clasa active de pe toate taburile
+
                     menuTabs.forEach(t => t.classList.remove('active'));
-                    
-                    // Adaugă clasa active pe tabul curent
+
                     this.classList.add('active');
-                    
-                    // Ascunde toate conținuturile de meniu
+
                     document.querySelectorAll('.menu-content').forEach(content => {
                         content.classList.remove('active');
                     });
-                    
-                    // Afișează conținutul corespunzător
+
                     const tabId = this.getAttribute('data-tab');
                     document.getElementById(tabId + '-menu').classList.add('active');
                 });
             });
 
-            // Buton de scroll sus
             const scrollTopButton = document.getElementById('scrollTop');
             
             window.addEventListener('scroll', function() {
@@ -592,7 +582,6 @@
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
             
-            // Smooth scroll pentru link-uri de navigare
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     e.preventDefault();
@@ -609,20 +598,19 @@
         });
     </script>
     <script>
-    // Responsive navbar toggle
+
     const navbarToggle = document.getElementById('navbarToggle');
     const navLinks = document.getElementById('navLinks');
 
     if (navbarToggle && navLinks) {
-        // Toggle menu
+
         navbarToggle.addEventListener('click', function(e) {
             e.stopPropagation();
             navLinks.classList.toggle('active');
-            // Adaugă/șterge clasa 'open' pe buton pentru efect vizual (opțional)
+
             navbarToggle.classList.toggle('open');
         });
 
-        // Închide meniul la click pe orice link
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
@@ -630,7 +618,6 @@
             });
         });
 
-        // Închide meniul dacă dai click oriunde în afara meniului
       document.addEventListener('click', function(e) {
         if (
         navLinks.classList.contains('active') &&

@@ -1,5 +1,5 @@
 
-        /* Stiluri de bază */
+
         * {
             margin: 0;
             padding: 0;
@@ -12,8 +12,7 @@
             color: #333;
             scroll-behavior: smooth;
         }
-        
-        /* Header și navigare */
+
         header {
             background-color: #5d4037;
             color: white;
@@ -22,8 +21,7 @@
             top: 0;
             z-index: 100;
         }
-        
-        /* Responsive Navbar */
+
         .navbar {
             display: flex;
             align-items: center;
@@ -53,7 +51,6 @@
             transition: 0.3s;
         }
 
-        /* Mobile styles */
                 @media (max-width: 900px) {
         .nav-links {
             position: absolute;
@@ -113,7 +110,7 @@
         /* Secțiuni comune */
         section {
             padding: 60px 20px;
-            scroll-margin-top: 70px; /* Pentru a compensa header-ul sticky */
+            scroll-margin-top: 70px; 
         }
         
         .section-title {
@@ -212,7 +209,6 @@
             margin-top: 15px;
         }
         
-        /* Despre noi */
         #about {
             background-color: white;
         }
@@ -290,8 +286,7 @@
             margin: 0;
             color: #666;
         }
-        
-        /* Meniu */
+
         #menu {
             background-color: #f5f0e8;
         }
@@ -368,7 +363,6 @@
             color: #666;
         }
         
-        /* Team section */
         #team {
             background-color: #bcaaa4;
             color: white;
@@ -416,7 +410,6 @@
             color: #666;
         }
         
-        /* Rezervări */
         #reservations {
             background-color: white;
         }
@@ -485,8 +478,7 @@
         .submit-btn:hover {
             background-color: #6d4c41;
         }
-        
-        /* Contact */
+
         #contact {
             background-color: #f5f0e8;
         }
@@ -552,8 +544,7 @@
             margin: 0;
             color: #666;
         }
-        
-        /* Program */
+
         .hours {
             margin-top: 30px;
         }
@@ -569,7 +560,7 @@
             margin-bottom: 5px;
         }
         
-        /* Contact form */
+
         .contact-form h3 {
             margin-top: 0;
             margin-bottom: 20px;
@@ -577,20 +568,18 @@
             padding-bottom: 10px;
         }
         
-        /* Footer */
+
         footer {
             background-color: #5d4037;
             color: white;
             text-align: center;
             padding: 20px;
         }
-        
-        /* Utilități */
+
         .hidden {
             display: none;
         }
-        
-        /* Mesaje de succes/eroare */
+
         .message {
             padding: 15px;
             margin-bottom: 20px;
@@ -608,8 +597,7 @@
             color: #721c24;
             border: 1px solid #f5c6cb;
         }
-        
-        /* Buton de scroll sus */
+  
         .scroll-top {
             position: fixed;
             bottom: 20px;
@@ -631,7 +619,7 @@
         .scroll-top.visible {
             opacity: 1;
         }
-  /* Stiluri pentru imagini în hero section */
+
 .hero-image {
     position: relative;
     overflow: hidden;
@@ -643,7 +631,6 @@
     object-fit: cover;
 }
 
-/* Stiluri pentru imagini în about section */
 .about-image img {
     width: 100%;
     height: 100%;
@@ -651,7 +638,6 @@
     border-radius: 5px;
 }
 
-/* Stiluri pentru imagini în team section */
 .member-photo img {
     width: 100%;
     height: 100%;
@@ -663,7 +649,6 @@
         height: 300px;
     }
 }
-  /* Stiluri pentru imagini în hero section */
 .hero-image {
     position: relative;
     overflow: hidden;
@@ -675,7 +660,6 @@
     object-fit: cover;
 }
 
-/* Stiluri pentru imagini în about section */
 .about-image img {
     width: 100%;
     height: 100%;
@@ -683,7 +667,6 @@
     border-radius: 5px;
 }
 
-/* Stiluri pentru imagini în team section */
 .member-photo img {
     width: 100%;
     height: 100%;
