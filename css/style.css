@@ -27,7 +27,6 @@ header {
     position: relative;
 }
 
-/* Stiluri pentru linkuri din meniu (desktop și mobil) */
 .nav-links a {
     color: white;
     text-decoration: none;
